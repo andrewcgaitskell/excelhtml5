@@ -37,7 +37,7 @@
 <script>
         var output = document.getElementById('output');   
         
-        const table = XLSX.readFile('RenderThis.xlsx');
+        const table = XLSX.readFile('/RenderThis.xlsx');
         const sheet = table.Sheets[table.SheetNames[0]];
         var range = XLSX.utils.decode_range(sheet['!ref']);
         for (let rowNum = range.s.r; rowNum <= range.e.r; rowNum++) {
