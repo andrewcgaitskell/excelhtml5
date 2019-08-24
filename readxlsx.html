@@ -15,6 +15,11 @@
 </div>
 
         
+
+<div id="second wrapper">
+<input type="file" id="input-excel2" />
+</div>
+        
 <div id="output">
         <p>data should appear here</p>
 </div>
@@ -35,18 +40,23 @@
 </script>
 
 <script>
-        var output = document.getElementById('output');   
+        $('#input-excel2').change(function(e){
+                var reader = new FileReader();
+                reader.readAsArrayBuffer(e.target.files[0]);
+                reader.onload = function(e) {
+                        var data = new Uint8Array(reader.result);
+                        var wb = XLSX.read(data,{type:'array'});
+                        const sheet = wb.Sheets[wb.SheetNames[0]];
+                        var range = XLSX.utils.decode_range(sheet['!ref']);
+                        for (let rowNum = range.s.r; rowNum <= range.e.r; rowNum++) {
+                        // Example: Get second cell in each row, i.e. Column "B"
+                        const secondCell = sheet[XLSX.utils.encode_cell({r: rowNum, c: 1})];
+                        // NOTE: secondCell is undefined if it does not exist (i.e. if its empty)
+                        console.log(secondCell); // secondCell.v contains the value, i.e. string or number
+                        output.innerHTML = secondCell;}
+                }
+        });
         
-        <!--file:///User/Danny/Desktop/javascriptWork/testing.txt-->
-        const table = XLSX.readFile('file:///var/www/html/excelhtml5/RenderThis.xlsx');
-        const sheet = table.Sheets[table.SheetNames[0]];
-        var range = XLSX.utils.decode_range(sheet['!ref']);
-        for (let rowNum = range.s.r; rowNum <= range.e.r; rowNum++) {
-        // Example: Get second cell in each row, i.e. Column "B"
-        const secondCell = sheet[XLSX.utils.encode_cell({r: rowNum, c: 1})];
-        // NOTE: secondCell is undefined if it does not exist (i.e. if its empty)
-        console.log(secondCell); // secondCell.v contains the value, i.e. string or number
-        output.innerHTML = secondCell;}
 
 </script>
 </body>
