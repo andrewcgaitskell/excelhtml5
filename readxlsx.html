@@ -1,21 +1,19 @@
 <!--https://redstapler.co/sheetjs-tutorial-convert-excel-html-table/-->
 <html>
-<head>
-<!--<script src="jquery-2.1.4.js"></script>-->
-        
+<head>        
 <script src="node_modules/jquery/dist/jquery.min.js"></script>
-<!--<script lang="javascript" src="xlsx.full.min.js"></script>-->
 <script lang="javascript" src="node_modules/xlsx/xlsx.mini.js"></script>-
         
 <!--<link rel="stylesheet" type="text/css" href="styles.css">-->
         
 </head>
 <body>
-<div id="navbar"><span>Red Stapler - SheetJS </span></div>
+<div id="navbar"><span>Read Excel File</span></div>
+
 <div id="wrapper">
-        
-        <input type="file" id="input-excel" />
+<input type="file" id="input-excel" />
 </div>
+
 <script>
         $('#input-excel').change(function(e){
                 var reader = new FileReader();
