@@ -1,0 +1,26 @@
+{
+  "name": "excelhtml5",
+  "version": "1.0.0",
+  "description": "readandrender",
+  "main": "index.js",
+  "dependencies": {
+    "sheetjs": "^1.0.21"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrewcgaitskell/excelhtml5.git"
+  },
+  "keywords": [
+    "excel"
+  ],
+  "author": "andrewcgaitskell",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andrewcgaitskell/excelhtml5/issues"
+  },
+  "homepage": "https://github.com/andrewcgaitskell/excelhtml5#readme"
+}
