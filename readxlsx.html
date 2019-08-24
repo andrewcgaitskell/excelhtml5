@@ -31,7 +31,7 @@
                         $('#wrapper')[0].innerHTML += htmlstr;
                 }
         });
-}
+
 </script>
 
 <script>
@@ -46,8 +46,8 @@
         const secondCell = sheet[XLSX.utils.encode_cell({r: rowNum, c: 1})];
         // NOTE: secondCell is undefined if it does not exist (i.e. if its empty)
         console.log(secondCell); // secondCell.v contains the value, i.e. string or number
-        output.innerHTML = secondCell;
-}
+        output.innerHTML = secondCell;}
+
 </script>
 </body>
 </html>
