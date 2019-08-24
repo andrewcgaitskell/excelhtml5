@@ -6,17 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Today's Date</title>
     <script src="js/script.js"></script>
+    <script type ="text/javascript">
+            window.onload = function() {
+            what();
+            function what(){
+                document.getElementById('hello').innerHTML = 'hi';
+            };
+        }
+        </script>
 </head>
 
 <body>
 
-<div id="hello"></div>
-    
-    <script type ="text/javascript">
-        what();
-        function what(){
-            document.getElementById('hello').innerHTML = 'hi';
-        };
+<div id='hello'></div>
    
 </body>
 
