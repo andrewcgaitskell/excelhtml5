@@ -7,7 +7,7 @@ h1 {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-table-editable {
+.table-editable {
   position: relative;
   
   glyphicon {
@@ -15,7 +15,7 @@ table-editable {
   }
 }
 
-table-remove {
+.table-remove {
   color: #700;
   cursor: pointer;
   
@@ -24,7 +24,7 @@ table-remove {
   }
 }
 
-table-up, table-down {
+.table-up, .table-down {
   color: #007;
   cursor: pointer;
   
@@ -33,7 +33,7 @@ table-up, table-down {
   }
 }
 
-table-add {
+.table-add {
   color: #070;
   cursor: pointer;
   position: absolute;
