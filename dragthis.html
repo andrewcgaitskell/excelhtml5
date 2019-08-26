@@ -21,7 +21,11 @@ function drag(ev) {
 function drop(ev) {
   ev.preventDefault();
   var data = ev.dataTransfer.getData("text");
-  ev.target.replaceChild(document.getElementById(data));
+  if(ev.target.hasChildNodes())
+    {ev.target.replaceChild(document.getElementById(data));}
+    else {
+      ev.target.appendChild(document.getElementById(data));
+      }
 }
 
 function get() {
