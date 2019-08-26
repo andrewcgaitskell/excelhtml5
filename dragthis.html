@@ -24,8 +24,8 @@ function drop(ev) {
   ev.target.appendChild(document.getElementById(data));
 }
 
-function get(id) {
-var iv = document.getElementById(id).innerHTML;
+function get() {
+var iv = document.getElementById('drag1').innerHTML;
 document.getElementById('div1').innerHTML = iv;
 }
 
@@ -39,7 +39,7 @@ document.getElementById('div1').innerHTML = iv;
 <br>
 <div id="drag1" draggable="true" ondragstart="drag(event)">Drag this</div>
 <br>
-<button id="output value" onclick=get('drag1')</button>
+<button id="output value" onclick='get()'>get dragged value</button>
 <br>
 <div id="dragged value">dragged value placeholder<div>
 </body>
