@@ -22,7 +22,7 @@ function drop(ev) {
   ev.preventDefault();
   var data = ev.dataTransfer.getData("text");
   if(ev.target.hasChildNodes())
-    {ev.target.replaceChild(document.getElementById(data));}
+    {ev.target.replaceChild(textnode, document.getElementById(data));}
     else {
       ev.target.appendChild(document.getElementById(data));
       }
