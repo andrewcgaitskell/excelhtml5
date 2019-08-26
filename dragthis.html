@@ -25,7 +25,7 @@ function drop(ev) {
 }
 
 function get() {
-var iv = document.getElementById('drag1').innerHTML;
+var iv = document.getElementById('div1').innerHTML;
 document.getElementById('dragged value').innerHTML = iv;
 }
 
@@ -35,7 +35,7 @@ document.getElementById('dragged value').innerHTML = iv;
 
 <p>Drag the W3Schools image into the rectangle:</p>
 <br>
-<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">empty</div>
 <br>
 <div id="drag1" draggable="true" ondragstart="drag(event)">Drag this</div>
 <br>
