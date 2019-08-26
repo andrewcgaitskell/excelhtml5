@@ -17,7 +17,7 @@ function myFunction() {
   var txt = "";
   var i;
   for (i = 0; i < c.length; i++) {
-    txt = txt + c[i].nodeName + " " + c[i].nodeValue + "<br>";
+    txt = txt + c[i].nodeName + " " + c[i].text + "<br>";
   }
 
   document.getElementById("demo").innerHTML = txt;
